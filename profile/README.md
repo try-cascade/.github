@@ -82,4 +82,4 @@ Cascade will now be ready to plan and deploy your containerized application. You
 - Rona Hsu ([LinkedIn](https://www.linkedin.com/in/rona-h-a48640246/), [GitHub](https://github.com/Macaroni2629))
 
 **Denver, CO**
-- Yueun Kim ([LinkedIn](https://www.linkedin.com/in/???/), [GitHub](https://github.com/yueunk))
+- Yueun Kim ([LinkedIn](https://www.linkedin.com/in/yueun-kim-19a406221/), [GitHub](https://github.com/yueunk))
