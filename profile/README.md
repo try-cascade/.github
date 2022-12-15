@@ -52,16 +52,16 @@ Cascade was built for users who wish to:
 ## How Cascade works
 
 Cascade depends on 3 parts:
-1. `cascade-agent`: the instrumentation that generates traces, and sends it to AWS X-Ray
-2. `cascade-backend`: the API server that creates a user-specific S3 bucket for container information, and generates Terraform config files for deployment
-3. `cascade-gui`: the GUI where users can deploy their containerized application, access the generated Terraform config files, and view logs and traces
+1. [`cascade-agent`](https://github.com/try-cascade/cascade-agent): the instrumentation that generates traces, and sends it to AWS X-Ray
+2. [`cascade-backend`](https://github.com/try-cascade/cascade-backend): the API server that creates a user-specific S3 bucket for container information, and generates Terraform config files for deployment
+3. [`cascade-gui`](https://github.com/try-cascade/cascade-gui): the GUI where users can deploy their containerized application, access the generated Terraform config files, and view logs and traces
 
 
 ## Cascade Compose
 
-You can run Cascade with Docker by following these steps:
+You can run [Cascade with Docker](https://github.com/try-cascade/cascade-compose) by following these steps:
 1. Run the Docker daemon
-2. Clone this `cascade-compose` directory
+2. Clone the `cascade-compose` directory
 3. `cd` into `cascade-compose` and execute `docker-compose up`
 
 ```bash
@@ -69,19 +69,6 @@ git clone https://github.com/try-cascade/cascade-compose.git && cd cascade-compo
 ```
 
 Cascade will now be ready to plan and deploy your containerized application. You can access the GUI at port 3000.
-
-**Images** 
-- `cascade-backend`: handles Terraform config files and communication between Cascade and AWS
-- `cascade-gui`: the GUI that handles user interactions and displays a status dashboard
-
-**Container Communication**
-
-The default Docker network created by `docker-compose` enables containers to communicate between themselves using their container names.
-
-**AWS Credentials**
-
-`docker-compose` defines a volume for AWS credentials for `cascade-backend`. When the backend container is started, it uses the volume to allow Terraform to access your configured AWS Credentials.
-In `docker-compose.yml`, the volume for AWS credentials is defined as `~/.aws`, which is the default path on Linux and macOS. Users with a different path for `.aws` must respecify the host path accordingly.
 
 ## Team
 
